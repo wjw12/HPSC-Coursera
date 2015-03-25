@@ -17,6 +17,7 @@ def plot_quad(xi,yi):
 	c = quad_interp(xi,yi)
 	x = linspace(xi.min()-1, xi.max()+1, 500)
 	plt.plot(x,c[0]+c[1]*x+c[2]*x**2)
+	plt.plot(xi,yi,'ro')
 	plt.show()
 
 def test_quad():
@@ -46,6 +47,7 @@ def plot_poly(xi,yi):
 	for j in range(n-1,0,-1):
 		y = y*x + c[j-1]
 	plt.plot(x,y)
+	plt.plot(xi,yi,'ro')
 	plt.show()
 
 def test_poly():
